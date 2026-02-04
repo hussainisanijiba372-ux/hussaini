@@ -1,4 +1,4 @@
-<! SPECIAL DATA OFFER>
+<! SPECIAL DATA OFFER >
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -96,8 +96,8 @@
             var selectedOffer = document.querySelector('input[name="dataOffer"]:checked');
             if (selectedOffer) {
                 var offer = selectedOffer.value;
-                // Redirecting to Gg Agency Smart Link with the selected offer
-                window.location.href = "https://your-smart-link.com?offer=" + encodeURIComponent(offer);
+                // Redirect to your Smart Link with the selected offer
+                window.location.href = "https://qkzpkdm.com/cl/f79e71cfd864a5f8?offer=" + encodeURIComponent(offer);
             } else {
                 alert("Please select a data plan.");
             }
