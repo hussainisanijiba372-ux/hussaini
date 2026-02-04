@@ -1,50 +1,87 @@
-<! SPECIAL DATA OFFER >
+<! SPECIAL DATA OFFER>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Special Data Offer</title>
     <style>
+        /* General styling */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #FF7E5F, #FEB47B); /* Beautiful gradient background */
+            color: white;
             text-align: center;
             margin: 0;
             padding: 0;
         }
         .container {
             background-color: white;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 30px;
+            border-radius: 15px;
             width: 80%;
+            max-width: 600px;
             margin: 50px auto;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            border: 2px solid #FEB47B; /* Border with a nice color */
         }
+
         h1 {
-            color: #007BFF;
+            color: #FF7E5F;
+            font-size: 36px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
+
         .offer {
-            margin: 20px 0;
+            margin: 15px 0;
             font-size: 18px;
         }
+
+        label {
+            font-size: 20px;
+            color: #333;
+        }
+
+        /* Styling the radio buttons */
+        input[type="radio"] {
+            margin-right: 10px;
+            accent-color: #FF7E5F; /* Custom accent color for the radio button */
+        }
+
         .cta-button {
             background-color: #28a745;
             color: white;
-            padding: 10px 20px;
+            padding: 12px 30px;
             border: none;
             cursor: pointer;
-            font-size: 16px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+            font-size: 18px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
+
         .cta-button:hover {
             background-color: #218838;
+            transform: scale(1.05);
         }
+
         .random-numbers {
-            margin-top: 20px;
-            font-size: 16px;
-            color: #555;
+            margin-top: 30px;
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
+            animation: moveNumbers 3s infinite alternate;
+        }
+
+        /* Animation for moving numbers */
+        @keyframes moveNumbers {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Styling the footer */
+        footer {
+            margin-top: 40px;
+            color: #FF7E5F;
         }
     </style>
 </head>
@@ -65,12 +102,21 @@
         </div>
 
         <div class="offer">
+            <input type="radio" id="4GB" name="dataOffer" value="4GB - 150 Naira">
+            <label for="4GB">4GB - 150 Naira</label>
+        </div>
+
+        <div class="offer">
             <button class="cta-button" id="selectOffer">Select Plan</button>
         </div>
 
         <div class="random-numbers" id="randomNumbers">
             <!-- Random numbers will be shown here -->
         </div>
+
+        <footer>
+            <p>&copy; 2026 Special Data Offer</p>
+        </footer>
     </div>
 
     <script>
@@ -96,7 +142,7 @@
             var selectedOffer = document.querySelector('input[name="dataOffer"]:checked');
             if (selectedOffer) {
                 var offer = selectedOffer.value;
-                // Redirect to your Smart Link with the selected offer
+                // Redirecting to your Smart Link with the selected offer
                 window.location.href = "https://qkzpkdm.com/cl/f79e71cfd864a5f8?offer=" + encodeURIComponent(offer);
             } else {
                 alert("Please select a data plan.");
