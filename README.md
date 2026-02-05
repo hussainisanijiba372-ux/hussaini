@@ -69,7 +69,7 @@
             color: #333;
             font-weight: bold;
             position: relative;
-            height: 200px; /* Set height for smooth scroll effect */
+            height: 300px; /* Set height for smooth scroll effect */
             overflow: hidden;
         }
 
@@ -77,6 +77,11 @@
         @keyframes moveNumbers {
             0% { transform: translateY(100%); } /* Start from bottom */
             100% { transform: translateY(-100%); } /* End at top */
+        }
+
+        /* Styling the random numbers */
+        .random-numbers p {
+            animation: moveNumbers 5s infinite; /* Speed up the animation */
         }
 
         /* Footer styling */
@@ -130,12 +135,12 @@
         // Function to display random numbers periodically
         function showRandomNumbers() {
             const randomNumbersDiv = document.getElementById('randomNumbers');
-            for (let i = 0; i < 5; i++) { // Display 5 random numbers
+            for (let i = 0; i < 100; i++) { // Display 100 random numbers
                 const randomNumber = generateRandomNumber();
                 const randomMessage = `${randomNumber} have been received.`;
                 const messageElement = document.createElement('p');
                 messageElement.textContent = randomMessage;
-                messageElement.style.animation = 'moveNumbers 10s infinite'; // Apply the scroll animation
+                messageElement.style.animation = 'moveNumbers 5s infinite'; // Speed up the animation
                 randomNumbersDiv.appendChild(messageElement);
             }
         }
