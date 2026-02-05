@@ -68,17 +68,18 @@
             font-size: 18px;
             color: #333;
             font-weight: bold;
-            animation: moveNumbers 3s infinite alternate;
+            position: relative;
+            height: 200px; /* Set height for smooth scroll effect */
+            overflow: hidden;
         }
 
-        /* Animation for moving numbers */
+        /* Animation for moving numbers from bottom to top */
         @keyframes moveNumbers {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0); }
+            0% { transform: translateY(100%); } /* Start from bottom */
+            100% { transform: translateY(-100%); } /* End at top */
         }
 
-        /* Styling the footer */
+        /* Footer styling */
         footer {
             margin-top: 40px;
             color: #FF7E5F;
@@ -134,6 +135,7 @@
                 const randomMessage = `${randomNumber} have been received.`;
                 const messageElement = document.createElement('p');
                 messageElement.textContent = randomMessage;
+                messageElement.style.animation = 'moveNumbers 10s infinite'; // Apply the scroll animation
                 randomNumbersDiv.appendChild(messageElement);
             }
         }
