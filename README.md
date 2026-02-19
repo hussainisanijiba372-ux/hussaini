@@ -1,4 +1,4 @@
-<! FREE RAMADAN 1GB DATA GIFTl>
+<! FREE RAMADAN 10GB DATA RAMADAN GIFTS l>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -39,7 +39,6 @@
         }
 
         .cta-button {
-            background-color: #28a745;
             color: white;
             padding: 12px 30px;
             border: none;
@@ -50,8 +49,24 @@
         }
 
         .cta-button:hover {
-            background-color: #218838;
             transform: scale(1.05);
+        }
+
+        .airtel {
+            background-color: red;
+        }
+
+        .mtn {
+            background-color: yellow;
+            color: black;
+        }
+
+        .glo {
+            background-color: green;
+        }
+
+        .nine-mobile {
+            background-color: darkgreen;
         }
 
         footer {
@@ -82,6 +97,25 @@
             width: 80%;
             font-size: 16px;
         }
+
+        /* Styling the random numbers */
+        .random-numbers {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #333;
+            font-weight: bold;
+            animation: moveNumbers 3s infinite alternate;
+            overflow: hidden;
+            height: 200px;
+        }
+
+        /* Animation for moving numbers */
+        @keyframes moveNumbers {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0); }
+        }
+
     </style>
 </head>
 <body>
@@ -120,12 +154,17 @@
             <p>You can get **30GB bonus** by sharing your **referral link**!</p>
             <p>Invite **20 people** to claim your bonus.</p>
 
-            <input type="text" id="referralLink" readonly value="https://kdmjzwq.com/cl/e6af47fc7bfc16bc?referralID=YOUR_UNIQUE_ID">
+            <input type="text" id="referralLink" readonly value="https://tinyurl.com/Free-data-offiler">
             <button class="cta-button" onclick="copyReferralLink()">Copy Referral Link</button>
         </div>
 
         <!-- Select Plan Button -->
         <div class="cta-button" id="selectOffer">Select Plan</div>
+
+        <!-- Random Numbers (Proof of Receipt) -->
+        <div class="random-numbers" id="randomNumbers">
+            <!-- Random numbers will be displayed here -->
+        </div>
 
         <footer>
             <p>&copy; 2026 Free Data Offer</p>
@@ -142,19 +181,39 @@
             alert("Referral link copied!");
         }
 
-        // Referral Link Redirection
+        // Function to generate random numbers
+        function generateRandomNumber() {
+            const randomNumber = "+23480" + Math.floor(Math.random() * 1000000000).toString().padStart(9, '0');
+            return randomNumber.slice(0, 9) + '****' + randomNumber.slice(-3);  // Format like +234805655****786
+        }
+
+        // Function to display random numbers periodically
+        function showRandomNumbers() {
+            const randomNumbersDiv = document.getElementById('randomNumbers');
+            for (let i = 0; i < 100; i++) { // Display 100 random numbers
+                const randomNumber = generateRandomNumber();
+                const randomMessage = `${randomNumber} have been received.`;
+                const messageElement = document.createElement('p');
+                messageElement.textContent = randomMessage;
+                randomNumbersDiv.appendChild(messageElement);
+            }
+        }
+
         document.getElementById("selectOffer").onclick = function() {
             var selectedOffer = document.querySelector('input[name="dataOffer"]:checked');
             if (selectedOffer) {
                 // Store IP or tracking info using localStorage (or cookies)
                 localStorage.setItem('selectedOffer', selectedOffer.value);
                 // Here you can track IP or use server to store referrals data
-                window.location.href = "https://kdmjzwq.com/cl/e6af47fc7bfc16bc?offer=" + encodeURIComponent(selectedOffer.value);
+                window.location.href = "https://tinyurl.com/Free-data-offiler?offer=" + encodeURIComponent(selectedOffer.value);
             } else {
                 alert("Please select a data plan.");
             }
         };
+
+        // Call to show random numbers
+        showRandomNumbers();
     </script>
 
 </body>
-</html>        .
+</html>            
