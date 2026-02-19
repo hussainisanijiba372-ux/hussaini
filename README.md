@@ -1,13 +1,13 @@
-<! RAMADAN GIFT FREE 10GB DATA BONUS>
-<html lang="ha">
+<! FREE RAMADAN 1GB DATA GIFTl>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kyautar 10GB Data na Ramadan Tare da Referral</title>
+    <title>Free 10GB Data Offer</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(to right, #FF7E5F, #FEB47B); /* Beautiful gradient background */
+            background: linear-gradient(to right, #FF7E5F, #FEB47B); /* Gradient background */
             color: white;
             text-align: center;
             margin: 0;
@@ -59,7 +59,6 @@
             color: #FF7E5F;
         }
 
-        /* Section for Referral */
         .referral-section {
             background-color: #FFF;
             color: #333;
@@ -88,8 +87,8 @@
 <body>
 
     <div class="container">
-        <h1>Kyautar 10GB Data na Ramadan</h1>
-        <p>Zaɓi kyautar 10GB data naka:</p>
+        <h1>Free 10GB Data Offer</h1>
+        <p>Choose your free 10GB data plan:</p>
 
         <!-- Airtel Offer -->
         <div class="offer">
@@ -97,17 +96,36 @@
             <label for="airtel">Free 10GB Airtel</label>
         </div>
 
-        <!-- Referral Section -->
-        <div class="referral-section">
-            <h3>Gayyata Abokanka da Iyali don Samun EXTRA 30GB</h3>
-            <p>Zaka iya samun **30GB bonus** ta hanyar raba **referral link** dinka!</p>
-            <p>Gayyata **20 mutane** don samun kyautar ka.</p>
-
-            <input type="text" id="referralLink" readonly value="https://kdmjzwq.com/cl/e6af47fc7bfc16bc?referralID=YOUR_UNIQUE_ID">
-            <button class="cta-button" onclick="copyReferralLink()">Kwafi Referral Link</button>
+        <!-- MTN Offer -->
+        <div class="offer">
+            <input type="radio" id="mtn" name="dataOffer" value="Free 10GB MTN">
+            <label for="mtn">Free 10GB MTN</label>
         </div>
 
-        <div class="cta-button" id="selectOffer">Zaɓi Plan</div>
+        <!-- Glo Offer -->
+        <div class="offer">
+            <input type="radio" id="glo" name="dataOffer" value="Free 10GB Glo">
+            <label for="glo">Free 10GB Glo</label>
+        </div>
+
+        <!-- 9Mobile Offer -->
+        <div class="offer">
+            <input type="radio" id="nineMobile" name="dataOffer" value="Free 10GB 9Mobile">
+            <label for="nineMobile">Free 10GB 9Mobile</label>
+        </div>
+
+        <!-- Referral Section -->
+        <div class="referral-section">
+            <h3>Invite Your Friends and Family to Earn EXTRA 30GB</h3>
+            <p>You can get **30GB bonus** by sharing your **referral link**!</p>
+            <p>Invite **20 people** to claim your bonus.</p>
+
+            <input type="text" id="referralLink" readonly value="https://kdmjzwq.com/cl/e6af47fc7bfc16bc?referralID=YOUR_UNIQUE_ID">
+            <button class="cta-button" onclick="copyReferralLink()">Copy Referral Link</button>
+        </div>
+
+        <!-- Select Plan Button -->
+        <div class="cta-button" id="selectOffer">Select Plan</div>
 
         <footer>
             <p>&copy; 2026 Free Data Offer</p>
@@ -133,10 +151,10 @@
                 // Here you can track IP or use server to store referrals data
                 window.location.href = "https://kdmjzwq.com/cl/e6af47fc7bfc16bc?offer=" + encodeURIComponent(selectedOffer.value);
             } else {
-                alert("Don Allah, zaɓi plan na data.");
+                alert("Please select a data plan.");
             }
         };
     </script>
 
 </body>
-</html>
+</html>        .
