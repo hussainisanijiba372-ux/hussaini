@@ -1,4 +1,4 @@
-<! FREE RAMADAN 10GB DATA RAMADAN GIFTS l>
+<! RAMADAN GIFT FREE 10GB DATA>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -216,4 +216,4 @@
     </script>
 
 </body>
-</html>            
+</html>
