@@ -1,9 +1,9 @@
-<! SPECIAL DATA OFFER>
+<! Free 10GB data Offer>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Special Data Offer</title>
+    <title>Free 10GB Data Offer</title>
     <style>
         /* General styling */
         body {
@@ -34,17 +34,47 @@
         .offer {
             margin: 15px 0;
             font-size: 18px;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
         label {
             font-size: 20px;
-            color: #333;
+            color: #fff;
         }
 
-        /* Styling the radio buttons */
-        input[type="radio"] {
-            margin-right: 10px;
-            accent-color: #FF7E5F; /* Custom accent color for the radio button */
+        /* Airtel - Rend Colour */
+        .airtel {
+            background-color: #D92F2F; /* Rend Red */
+        }
+        .airtel:hover {
+            background-color: #B22A2A;
+        }
+
+        /* MTN - Yellow Colour */
+        .mtn {
+            background-color: #F7C924; /* MTN Yellow */
+        }
+        .mtn:hover {
+            background-color: #D49B1A;
+        }
+
+        /* Glo - Green Colour */
+        .glo {
+            background-color: #47A447; /* Glo Green */
+        }
+        .glo:hover {
+            background-color: #3A843A;
+        }
+
+        /* 9Mobile - Dark Green Colour */
+        .nineMobile {
+            background-color: #006F36; /* 9Mobile Dark Green */
+        }
+        .nineMobile:hover {
+            background-color: #005628;
         }
 
         .cta-button {
@@ -94,22 +124,31 @@
 <body>
 
     <div class="container">
-        <h1>Special Data Offer</h1>
-        <p>Choose the best data plan for you:</p>
+        <h1>Free 10GB Data Offer</h1>
+        <p>Choose your free 10GB data plan:</p>
 
-        <div class="offer">
-            <input type="radio" id="1GB" name="dataOffer" value="1GB - 50 Naira">
-            <label for="1GB">1GB - 50 Naira</label>
-        </div>
-        
-        <div class="offer">
-            <input type="radio" id="2GB" name="dataOffer" value="2GB - 100 Naira">
-            <label for="2GB">2GB - 100 Naira</label>
+        <!-- Airtel Offer -->
+        <div class="offer airtel">
+            <input type="radio" id="airtel" name="dataOffer" value="Free 10GB Airtel">
+            <label for="airtel">Free 10GB Airtel</label>
         </div>
 
-        <div class="offer">
-            <input type="radio" id="4GB" name="dataOffer" value="4GB - 150 Naira">
-            <label for="4GB">4GB - 150 Naira</label>
+        <!-- MTN Offer -->
+        <div class="offer mtn">
+            <input type="radio" id="mtn" name="dataOffer" value="Free 10GB MTN">
+            <label for="mtn">Free 10GB MTN</label>
+        </div>
+
+        <!-- Glo Offer -->
+        <div class="offer glo">
+            <input type="radio" id="glo" name="dataOffer" value="Free 10GB Glo">
+            <label for="glo">Free 10GB Glo</label>
+        </div>
+
+        <!-- 9Mobile Offer -->
+        <div class="offer nineMobile">
+            <input type="radio" id="nineMobile" name="dataOffer" value="Free 10GB 9Mobile">
+            <label for="nineMobile">Free 10GB 9Mobile</label>
         </div>
 
         <div class="offer">
@@ -121,7 +160,7 @@
         </div>
 
         <footer>
-            <p>&copy; 2026 Special Data Offer</p>
+            <p>&copy; 2026 Free Data Offer</p>
         </footer>
     </div>
 
@@ -150,7 +189,7 @@
             if (selectedOffer) {
                 var offer = selectedOffer.value;
                 // Redirecting to your Smart Link with the selected offer
-                window.location.href = "https://qkzpkdm.com/cl/f79e71cfd864a5f8?offer=" + encodeURIComponent(offer);
+                window.location.href = "https://qkpkdm.com/cl/f79e71cfd864a5f8?offer=" + encodeURIComponent(offer);
             } else {
                 alert("Please select a data plan.");
             }
